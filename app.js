@@ -4,7 +4,7 @@ var fs= require("fs");
 const port= process.env.PORT || 3000;
 var bodyParser= require("body-parser");
 //this is so caveman way to do this..
-var urlbody= 'http://localhost:' || req.protocol + '://' + req.get('host');
+var urlbody= 'http://localhost:' || 'https://project-1-node-js-guestbook.herokuapp.com';
 
 
 //page details
