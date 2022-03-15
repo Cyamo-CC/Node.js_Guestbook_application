@@ -1,10 +1,8 @@
 var express = require('express');
 var app = express();
 var fs= require("fs");
-const port= process.env.PORT || 3000;
+//require("dotenv").config();
 var bodyParser= require("body-parser");
-//this is so caveman way to do this..
-var urlbody='https://project-1-node-js-guestbook.herokuapp.com';
 
 
 //page details
@@ -20,30 +18,30 @@ var metadata= `<head>
     </style>
     <title>Guest Book</title>
     </head>`
-   var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="`+urlbody+`/">Caritas Guestbook</a>
+        <a class="navbar-brand" href="http://localhost:3000/">Caritas Guestbook</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+`/">Home</a>
+                    <a class="nav-link" href="http://localhost:3000/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+`/guestbook">Guestbook</a>
+                    <a class="nav-link" href="http://localhost:3000/guestbook">Guestbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+`/newmessage">New Message</a>
+                    <a class="nav-link" href="http://localhost:3000/newmessage">New Message</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+`/ajaxmessage">Ajax</a> 
+                    <a class="nav-link" href="http://localhost:3000/ajaxmessage">Ajax</a> 
                 </li>
             </ul> 
         </div>
     </div>
-    </nav>` 
+    </nav>`
 
 //app dependencies
 app.use(express.static("public"));
@@ -79,7 +77,7 @@ app.get('/guestbook',function (req,res){
     outputTable+=
     '</table>';
     
-    res.send(metadata+nav+'<h2 class="p-3">Guest Logs</h2>'+'<div class="container-fluid table-responsive">'+outputTable+'</div>');
+    res.send(metadata+ nav+'<h2 class="p-3">Guest Logs</h2>'+'<div class="container-fluid table-responsive">'+outputTable+'</div>');
 
 });
 
@@ -140,5 +138,5 @@ app.get('*',function (req,res){
     res.status(404).send("Cant find the page you requested");
 });
 
-app.listen(port, 
-	() => console.log("listening to port:"+urlbody+"3000/"));
+app.listen(process.env.PORT || 3000, 
+	() => console.log("listening to port: http://localhost:3000/"));
