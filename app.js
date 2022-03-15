@@ -4,7 +4,7 @@ var fs= require("fs");
 const port= process.env.PORT || 3000;
 var bodyParser= require("body-parser");
 //this is so caveman way to do this..
-var urlbody= 'http://localhost:' || 'https://project-1-node-js-guestbook.herokuapp.com';
+var urlbody='http://localhost:' || 'https://project-1-node-js-guestbook.herokuapp.com';
 
 
 //page details
@@ -29,7 +29,7 @@ var metadata= `<head>
         <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+port+`/">Home</a>
+                    <a class="nav-link" href="`+port+`/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="`+urlbody+port+`/guestbook">Guestbook</a>
