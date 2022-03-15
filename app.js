@@ -4,7 +4,7 @@ var fs= require("fs");
 const port= process.env.PORT || 3000;
 var bodyParser= require("body-parser");
 //this is so caveman way to do this..
-var urlbody='http://localhost:' || 'https://project-1-node-js-guestbook.herokuapp.com';
+var urlbody='https://project-1-node-js-guestbook.herokuapp.com';
 
 
 //page details
@@ -22,7 +22,7 @@ var metadata= `<head>
     </head>`
    var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="`+urlbody+port+`/">Caritas Guestbook</a>
+        <a class="navbar-brand" href="`+urlbody+`/">Caritas Guestbook</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,13 +32,13 @@ var metadata= `<head>
                     <a class="nav-link" href="`+urlbody+`/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+port+`/guestbook">Guestbook</a>
+                    <a class="nav-link" href="`+urlbody+`/guestbook">Guestbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+port+`/newmessage">New Message</a>
+                    <a class="nav-link" href="`+urlbody+`/newmessage">New Message</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="`+urlbody+port+`/ajaxmessage">Ajax</a> 
+                    <a class="nav-link" href="`+urlbody+`/ajaxmessage">Ajax</a> 
                 </li>
             </ul> 
         </div>
