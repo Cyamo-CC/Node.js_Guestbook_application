@@ -29,7 +29,7 @@ var metadata= `<head>
         <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="`+port+`/">Home</a>
+                    <a class="nav-link" href="`+urlbody+`/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="`+urlbody+port+`/guestbook">Guestbook</a>
