@@ -3,7 +3,7 @@ var app = express();
 var fs= require("fs");
 //require("dotenv").config();
 var bodyParser= require("body-parser");
-const port = process.env.PORT||3000;
+
 
 //page details
 var metadata= `<head>
@@ -120,7 +120,7 @@ app.get('/newmessage',function (req,res){
 
 app.get('/ajaxmessage',function (req,res){
     res.sendFile(__dirname+'/public/ajax.html');
-})
+});
     app.post('/ajaxmessage',function(request,response){
         
         //select fields to fetch and write
@@ -136,8 +136,8 @@ app.get('/ajaxmessage',function (req,res){
 //always keep this failsafe as the last route
 app.get('*',function (req,res){
     res.status(404).send("Cant find the page you requested");
-})
+});
 
-app.listen(port, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('listening to port: http://localhost:3000/')
-})
+});
