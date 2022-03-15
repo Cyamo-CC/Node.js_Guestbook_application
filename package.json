@@ -2,7 +2,7 @@
   "name": "heroku",
   "version": "1.0.0",
   "description": "Project 1, Node.js Guestgook application, deploying it to heroku",
-  "main": "Server.js",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.17.3",
     "jquery": "^3.6.0"

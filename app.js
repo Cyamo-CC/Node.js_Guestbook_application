@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var fs= require("fs");
-//require("dotenv").config();
+
 var bodyParser= require("body-parser");
 
 
@@ -18,7 +18,7 @@ var metadata= `<head>
     </style>
     <title>Guest Book</title>
     </head>`
- /*  var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+   var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="http://localhost:3000/">Caritas Guestbook</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
@@ -41,7 +41,7 @@ var metadata= `<head>
             </ul> 
         </div>
     </div>
-    </nav>` */
+    </nav>` 
 
 //app dependencies
 app.use(express.static("public"));
@@ -77,7 +77,7 @@ app.get('/guestbook',function (req,res){
     outputTable+=
     '</table>';
     
-    res.send(metadata+'<h2 class="p-3">Guest Logs</h2>'+'<div class="container-fluid table-responsive">'+outputTable+'</div>');
+    res.send(metadata+nav+'<h2 class="p-3">Guest Logs</h2>'+'<div class="container-fluid table-responsive">'+outputTable+'</div>');
 
 });
 
@@ -114,7 +114,7 @@ app.get('/newmessage',function (req,res){
         fs.writeFile("./public/GuestLog.json",jsonStr, (err)=>{
         if(err) throw err;});
 
-    response.send(metadata+'<h2>Thank you for posting!</h2>');
+    response.send(metadata+nav+'<h2>Thank you for posting!</h2>');
 
     });
 
