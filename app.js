@@ -138,6 +138,5 @@ app.get('*',function (req,res){
     res.status(404).send("Cant find the page you requested");
 });
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log('listening to port: http://localhost:3000/')
-});
+app.listen(process.env.PORT || 3000, 
+	() => console.log("listening to port: http://localhost:3000/"));
