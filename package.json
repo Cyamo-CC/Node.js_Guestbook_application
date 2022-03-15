@@ -1,0 +1,32 @@
+{
+  "name": "heroku",
+  "version": "1.0.0",
+  "description": "Project 1, Node.js Guestgook application, deploying it to heroku",
+  "main": "Server.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyamo-CC/Project-1.git"
+  },
+  "keywords": [
+    "Project_1",
+    "heroku",
+    "express",
+    "Node.js",
+    "Guestbook-application"
+  ],
+  "author": "Carita Carstensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyamo-CC/Project-1/issues"
+  },
+  "homepage": "https://github.com/Cyamo-CC/Project-1#readme"
+}
