@@ -3,7 +3,7 @@ var app = express();
 var fs= require("fs");
 //require("dotenv").config();
 var bodyParser= require("body-parser");
-const port =3000
+const port = process.env.PORT||3000;
 
 //page details
 var metadata= `<head>
