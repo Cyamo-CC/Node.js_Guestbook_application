@@ -20,23 +20,23 @@ var metadata= `<head>
     </head>`
   var nav=` <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="http://localhost:3000/">Caritas Guestbook</a>
+        <a class="navbar-brand" href="/">Caritas Guestbook</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:3000/">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:3000/guestbook">Guestbook</a>
+                    <a class="nav-link" href="/guestbook">Guestbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:3000/newmessage">New Message</a>
+                    <a class="nav-link" href="/newmessage">New Message</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:3000/ajaxmessage">Ajax</a> 
+                    <a class="nav-link" href="/ajaxmessage">Ajax</a> 
                 </li>
             </ul> 
         </div>
