@@ -119,7 +119,7 @@ app.get('/newmessage',function (req,res){
     });
 
 app.get('/ajax',function (req,res){
-    res.sendFile(__dirname+'/public/ajax.html');
+    res.sendFile(__dirname+'/public/Ajax.html');
 });
     app.post('/ajax',function(request,response){
         
