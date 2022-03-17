@@ -30,13 +30,13 @@ var metadata= `<head>
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/guestbook">Guestbook</a>
+                    <a class="nav-link" href="guestbook">Guestbook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/newmessage">New Message</a>
+                    <a class="nav-link" href="newmessage">New Message</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/ajaxmessage">Ajax</a> 
+                    <a class="nav-link" href="ajax">Ajax</a> 
                 </li>
             </ul> 
         </div>
@@ -118,10 +118,10 @@ app.get('/newmessage',function (req,res){
 
     });
 
-app.get('/ajaxmessage',function (req,res){
+app.get('/ajax',function (req,res){
     res.sendFile(__dirname+'/public/ajax.html');
 });
-    app.post('/ajaxmessage',function(request,response){
+    app.post('/ajax',function(request,response){
         
         //select fields to fetch and write
         var name= request.body.name;

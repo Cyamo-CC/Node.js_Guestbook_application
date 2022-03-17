@@ -17,7 +17,7 @@ function log(){
             
         };
     };
-    ajax.open("POST","/ajaxmessage", true);
+    ajax.open("POST","/ajax", true);
     ajax.setRequestHeader(
         "Content-type",
         "application/x-www-form-urlencoded"
